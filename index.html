@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Identity Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Identity Builder</h1>
+        <div id="step1" class="step active">
+            <h3>What is your current role?</h3>
+            <input type="text" id="role" placeholder="Enter your role">
+            <button onclick="nextStep(2)">Next</button>
+        </div>
+        <div id="step2" class="step">
+            <h3>How many years of experience do you have?</h3>
+            <input type="number" id="experience" placeholder="Years of experience">
+            <button onclick="prevStep(1)">Back</button>
+            <button onclick="nextStep(3)">Next</button>
+        </div>
+        <div id="step3" class="step">
+            <h3>What motivates you in your work?</h3>
+            <input type="text" id="motivation" placeholder="Enter motivation">
+            <button onclick="prevStep(2)">Back</button>
+            <button onclick="generateStatement()">Generate Statement</button>
+        </div>
+        <div id="result" class="step">
+            <h3>Your Career Identity Statement:</h3>
+            <p id="statement"></p>
+            <button onclick="prevStep(3)">Edit</button>
+            <button onclick="downloadText()">Download as Text</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
